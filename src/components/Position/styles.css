@@ -3,4 +3,12 @@
   height: 5rem;
 
   border: 1px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.position div {
+  font-size: 3rem;
 }
