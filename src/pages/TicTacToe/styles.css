@@ -1,0 +1,9 @@
+.container {
+  width: 50%;
+
+  padding-top: 10rem;
+
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
