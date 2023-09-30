@@ -2,8 +2,22 @@
   width: 75%;
 
   padding-top: 10rem;
+  margin: auto;
 
   display: flex;
   justify-content: center;
-  margin: auto;
+  align-items: flex-start;
+
+  gap: 4rem;
+}
+
+.container ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.container ol li::marker {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
