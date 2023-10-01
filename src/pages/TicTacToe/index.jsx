@@ -1,11 +1,11 @@
-import { Board } from '../../components/Board'
+import { Game } from '../../components/Game'
 
 import './styles.css'
 
 export function TicTacToe() {
   return (
     <div className="container">
-      <Board />
+      <Game />
     </div>
   )
 }

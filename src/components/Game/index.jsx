@@ -6,7 +6,7 @@ import { List } from '../List'
 
 import { useState } from 'react'
 
-export function Board() {
+export function Game() {
   const [xIsNext, setXIsNext] = useState(true)
   const [squares, setSquares] = useState(Array(9).fill(null))
   const [history, setHistory] = useState(Array(squares))
@@ -69,7 +69,7 @@ export function Board() {
         </div>
       </div>
       <div className="history">
-        <List />
+        <List history={history}/>
       </div>
     </>
   )
