@@ -4,27 +4,16 @@ import { Button } from '../../components/Button'
 import './styles.css'
 
 export function TicTacToe() {
-  return(
-    <div className='container'>
-      <div>   
-      <Board/>
+  return (
+    <div className="container">
+      <div>
+        <Board />
       </div>
       <ol>
         <li>
-          <Button/>
-        </li>
-        <li>
-          <Button/>
-        </li>
-        <li>
-          <Button/>
-        </li>
-        <li>
-          <Button/>
+          <Button />
         </li>
       </ol>
     </div>
   )
 }
-
-

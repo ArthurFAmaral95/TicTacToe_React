@@ -1,9 +1,9 @@
-import './styles.css';
+import './styles.css'
 
-export function Button(){
-  return(
+export function Button() {
+  return (
     <>
-    <button>Go to game start</button>
+      <button>Go to game start</button>
     </>
   )
 }
