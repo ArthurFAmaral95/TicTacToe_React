@@ -1,6 +1,7 @@
 import './styles.css';
 
 import {Square} from '../Square'
+import { Header } from '../Header';
 
 import { useState } from 'react'
 
@@ -48,6 +49,8 @@ export function Board(){
   }
 
   return(
+    <>
+    <Header value={xIsNext ? '❌' : '⭕️'}/>
     <div className="board" >
       <Square value={squares[0]} onSquareClick={()=>handleClick(0)}/>
       <Square value={squares[1]} onSquareClick={()=>handleClick(1)}/>
@@ -59,4 +62,5 @@ export function Board(){
       <Square value={squares[7]} onSquareClick={()=>handleClick(7)}/>
       <Square value={squares[8]} onSquareClick={()=>handleClick(8)}/>
     </div>
+    </>
   )}

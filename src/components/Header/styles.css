@@ -2,4 +2,10 @@ p {
   font-size: 2rem;
 
   margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  gap: 0.5rem;
 }

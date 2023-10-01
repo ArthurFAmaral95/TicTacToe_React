@@ -1,9 +1,9 @@
 import './styles.css'
 
-export function Header(){
+export function Header({value}){
   return(
     <>
-    <p>Next player: X</p>
+    <p>Next player: <span>{value}</span></p>
     </>
   )
 }
