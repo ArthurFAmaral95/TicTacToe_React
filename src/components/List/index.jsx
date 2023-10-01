@@ -3,7 +3,11 @@ import './styles.css'
 
 export function List({ history }) {
   const renderStates = history.map(state => (
-    <ListItem state={state} key={history.indexOf(state)} />
+    <ListItem
+      state={state}
+      key={history.indexOf(state)}
+      playN={history.indexOf(state)}
+    />
   ))
   return <ol>{renderStates}</ol>
 }
