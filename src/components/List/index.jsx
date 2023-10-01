@@ -4,7 +4,7 @@ import './styles.css'
 export function List(history) {
   return (
     <ol>
-      <ListItem />
+      {history[1]}
       <ListItem />
     </ol>
   )

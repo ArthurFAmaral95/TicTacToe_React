@@ -1,15 +1,18 @@
-import './styles.css'
-
-import { Square } from '../Square'
 import { Header } from '../Header'
 import { List } from '../List'
+import { Board } from '../Board'
 
 import { useState } from 'react'
 
 export function Game() {
   const [xIsNext, setXIsNext] = useState(true)
-  const [squares, setSquares] = useState(Array(9).fill(null))
-  const [history, setHistory] = useState(Array(squares))
+  const [history, setHistory] = useState([Array(9).fill(null)])
+  const currentSquares = history[history.length - 1]
+
+  function handlePlay(nextSquares) {
+    setHistory(prevState => [...prevState, nextSquares])
+    setXIsNext(!xIsNext)
+  }
 
   function calculateWinner(array) {
     const winningCombinations = [
@@ -32,44 +35,22 @@ export function Game() {
     return null
   }
 
-  function handleClick(i) {
-    if (squares[i] || calculateWinner(squares)) {
-      return
-    }
-
-    const nextSquares = squares.slice()
-    if (xIsNext) {
-      nextSquares[i] = '❌'
-    } else {
-      nextSquares[i] = '⭕️'
-    }
-
-    setSquares(nextSquares)
-    setXIsNext(!xIsNext)
-    setHistory(prevState => [...prevState, nextSquares])
-  }
-
   return (
     <>
       <div className="game">
         <Header
           value={xIsNext ? '❌' : '⭕️'}
-          winner={calculateWinner(squares)}
+          winner={calculateWinner(currentSquares)}
         />
-        <div className="board">
-          <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-          <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-          <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
-          <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
-          <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
-          <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
-          <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
-          <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-          <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
-        </div>
+        <Board
+          xIsNext={xIsNext}
+          squares={currentSquares}
+          onPlay={handlePlay}
+          calculateWinner={calculateWinner}
+        />
       </div>
       <div className="history">
-        <List history={history}/>
+        <List history={history} />
       </div>
     </>
   )
