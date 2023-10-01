@@ -1,9 +1,9 @@
 import './styles.css'
 
-export function ListItem() {
+export function ListItem(state, key) {
   return (
     <>
-      <li>
+      <li key={key}>
         <button>Go to game start</button>
       </li>
     </>
