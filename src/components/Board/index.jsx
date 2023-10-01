@@ -50,7 +50,7 @@ export function Board(){
 
   return(
     <>
-    <Header value={xIsNext ? '❌' : '⭕️'}/>
+    <Header value={xIsNext ? '❌' : '⭕️'} winner={calculateWinner(squares)}/>
     <div className="board" >
       <Square value={squares[0]} onSquareClick={()=>handleClick(0)}/>
       <Square value={squares[1]} onSquareClick={()=>handleClick(1)}/>

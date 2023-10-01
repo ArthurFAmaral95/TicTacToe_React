@@ -1,9 +1,12 @@
 import './styles.css'
 
-export function Header({value}){
+export function Header({value, winner}){
   return(
     <>
-    <p>Next player: <span>{value}</span></p>
+    <p>
+    {winner? 'Winner is: ' : 'Next player: ' }
+    <span>{winner?  winner :  value}</span>
+    </p>
     </>
   )
 }
