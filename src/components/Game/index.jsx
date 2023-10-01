@@ -7,11 +7,19 @@ import { useState } from 'react'
 export function Game() {
   const [xIsNext, setXIsNext] = useState(true)
   const [history, setHistory] = useState([Array(9).fill(null)])
-  const currentSquares = history[history.length - 1]
+  const [currentMove, setCurrentMove] = useState(0)
+  const currentSquares = history[currentMove]
 
   function handlePlay(nextSquares) {
-    setHistory(prevState => [...prevState, nextSquares])
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares]
+    setHistory(nextHistory)
+    setCurrentMove(nextHistory.length - 1)
     setXIsNext(!xIsNext)
+  }
+
+  function jumpTo(nextMove) {
+    setCurrentMove(nextMove)
+    setXIsNext(nextMove % 2 === 0)
   }
 
   function calculateWinner(array) {
@@ -50,7 +58,7 @@ export function Game() {
         />
       </div>
       <div className="history">
-        <List history={history} />
+        <List history={history} handleTime={jumpTo} />
       </div>
     </>
   )
