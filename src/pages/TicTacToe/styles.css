@@ -11,13 +11,3 @@
   gap: 4rem;
 }
 
-.container ol {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.container ol li::marker {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
