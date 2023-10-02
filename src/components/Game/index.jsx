@@ -56,7 +56,7 @@ export function Game() {
         />
       </div>
       <div className="history">
-        <List history={history} handleTime={jumpTo} />
+        <List history={history} handleTime={jumpTo} play={history.length}/>
       </div>
     </>
   )

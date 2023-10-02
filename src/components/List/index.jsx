@@ -1,7 +1,7 @@
 import { ListItem } from '../ListItem'
 import './styles.css'
 
-export function List({ history, handleTime }) {
+export function List({ history, handleTime, play }) {
   const renderStates = history.map(state => (
     <ListItem
       key={history.indexOf(state)}
@@ -9,5 +9,10 @@ export function List({ history, handleTime }) {
       move={handleTime}
     />
   ))
-  return <ol>{renderStates}</ol>
+  return (
+    <ol>
+      {renderStates}
+      <p>You are at move #{play}</p>
+    </ol>
+  )
 }
