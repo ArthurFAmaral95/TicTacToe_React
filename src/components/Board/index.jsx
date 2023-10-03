@@ -16,17 +16,19 @@ export function Board({ xIsNext, squares, onPlay, calculateWinner }) {
     }
     onPlay(nextSquares)
   }
-  return (
-    <div className="board">
-      <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-      <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-      <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
-      <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
-      <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
-      <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
-      <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
-      <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-      <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
-    </div>
-  )
+
+  const boardPositions = []
+  for (let i = 0; i < 9; i++) {
+    boardPositions.push(i)
+  }
+
+  const renderBoard = boardPositions.map(position => (
+    <Square
+      value={squares[position]}
+      onSquareClick={() => handleClick(position)}
+      key={position}
+    />
+  ))
+
+  return <div className="board">{renderBoard}</div>
 }

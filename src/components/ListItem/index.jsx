@@ -1,9 +1,9 @@
 import './styles.css'
 
-export function ListItem({ playN, move }, key) {
+export function ListItem({ playN, move }) {
   return (
     <>
-      <li key={key}>
+      <li>
         <button onClick={() => move(playN)}>
           {playN === 0 ? 'Go to game start' : 'Go to play #' + playN}
         </button>
