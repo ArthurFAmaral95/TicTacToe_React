@@ -5,7 +5,7 @@ export function Header({ value, winner }) {
     <>
       <p>
         {winner ? 'Winner is: ' : 'Next player: '}
-        <span>{winner ? winner : value}</span>
+        <span>{winner ? winner[0] : value}</span>
       </p>
     </>
   )

@@ -36,7 +36,8 @@ export function Game() {
     for (let i = 0; i < winningCombinations.length; i++) {
       const [a, b, c] = winningCombinations[i]
       if (array[a] && array[a] === array[b] && array[a] === array[c]) {
-        return array[a]
+        const result = [array[a], winningCombinations[i]]
+        return result
       }
     }
     return null
@@ -58,6 +59,7 @@ export function Game() {
           squares={currentSquares}
           onPlay={handlePlay}
           calculateWinner={calculateWinner}
+          winnerSquares={calculateWinner(currentSquares)}
         />
       </div>
       <div className="history">
