@@ -7,6 +7,7 @@ import { useState } from 'react'
 export function Game() {
   const [history, setHistory] = useState([Array(9).fill(null)])
   const [currentMove, setCurrentMove] = useState(0)
+  const [descending, setDescending] = useState(false)
   const xIsNext = currentMove % 2 === 0
   const currentSquares = history[currentMove]
 
@@ -41,6 +42,10 @@ export function Game() {
     return null
   }
 
+  function toggleOrder() {
+    setDescending(!descending)
+  }
+
   return (
     <>
       <div className="game">
@@ -56,7 +61,13 @@ export function Game() {
         />
       </div>
       <div className="history">
-        <List history={history} handleTime={jumpTo} play={history.length}/>
+        <List
+          history={history}
+          handleTime={jumpTo}
+          play={history.length}
+          toggleOrder={toggleOrder}
+          descending={descending}
+        />
       </div>
     </>
   )
