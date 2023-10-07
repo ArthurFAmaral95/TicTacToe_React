@@ -98,14 +98,14 @@ This project consists of a simple Tic Tac Toe game with the following funcionali
 </ol>
 
 <p align="center">
-  <img alt="Tic Tac Toe game initial state" src="./src/public/InitialState.png" width="300">
-  <img alt="Tic Tac Toe game" src="./src/public/Game.png" width="300" >
+  <img alt="Tic Tac Toe game initial state" src="./public/InitialState.png" width="300">
+  <img alt="Tic Tac Toe game" src="./public/Game.png" width="300" >
 
 </p>
 <p align="center">
-  <img alt="Tic Tac Toe game winner" src="./src/public/GameWinner.png" width="300">
-  <img alt="Tic Tac Toe game: list on descending order" src="./src/public/DescendingOrder.png" width="300">
+  <img alt="Tic Tac Toe game winner" src="./public/GameWinner.png" width="300">
+  <img alt="Tic Tac Toe game: list on descending order" src="./public/DescendingOrder.png" width="300">
 </p>
 <p align="center">
-  <img alt="Tic Tac Toe game draw" src="./src/public/Draw.png" width="300">
+  <img alt="Tic Tac Toe game draw" src="./public/Draw.png" width="300">
 </p>
