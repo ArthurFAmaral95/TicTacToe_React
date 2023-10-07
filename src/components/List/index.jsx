@@ -8,7 +8,6 @@ export function List({
   play,
   toggleOrder,
   descending,
-  value,
   winner
 }) {
   const renderStates = history.map(state => (

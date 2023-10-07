@@ -69,7 +69,6 @@ export function Game() {
           play={history.length}
           toggleOrder={toggleOrder}
           descending={descending}
-          value={xIsNext ? '❌' : '⭕️'}
           winner={calculateWinner(currentSquares)}
         />
       </div>
