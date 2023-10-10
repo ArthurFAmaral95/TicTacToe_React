@@ -1,6 +1,6 @@
 <h1>❌ Tic Tac Toe ⭕️</h1>
 <h2>
-This was a project React.dev web page where we use React to build a Tic Tac Toe game.
+This was a project from React.dev web page where we use React to build a Tic Tac Toe game.
 </h2>
 
 <hr>
