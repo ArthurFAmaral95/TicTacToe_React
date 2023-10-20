@@ -71,4 +71,4 @@ This project was developed using the following technologies:
 ## 🔖 How to play
 
 - [Play online](https://tic-tac-toe-eosin-zeta.vercel.app)
-- Download the zip file and run <code>npm run dev</code> on the terminal and acess localhost on a browser.
+- Or download the zip file, download the modules needed with <code>npm install</code>, run <code>npm run dev</code> on the terminal and access localhost on a browser.
