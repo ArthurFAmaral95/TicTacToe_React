@@ -1,11 +1,16 @@
-<h1>❌ Tic Tac Toe ⭕️</h1>
+<h1 align="center">❌ Tic Tac Toe ⭕️</h1>
+
+<p align="center">
+  <img alt="Tic Tac Toe game" src="./public/GameWinner.png" width="100%">
+</p>
+
 <h2>
 This was a project from React.dev web page where we use React to build a Tic Tac Toe game.
 </h2>
 
-<hr>
 
-<h3>The Project</h3>
+
+## 💻 Project
 <p>
 This project consists of a simple Tic Tac Toe game with the following funcionalities and characteristics:
 </p>
@@ -50,62 +55,20 @@ This project consists of a simple Tic Tac Toe game with the following funcionali
     If a move is made after returning to a previous state of the board, the game should continue from that point.
   </li>
  </ul>
-<hr>
 
-<h3>Technologies</h3>
 
-<ol>
-  <li>
-  HTML
-    <ul>
-      <li>Class</li>
-      <li>Id</li>
-      <li>Google Fonts</li>
-      <li>Buttons</li>
-      <li>Ordered list</li>
-    </ul>
-  </li>
+## 🚀 Technologies
 
-  <li>
-  CSS
-    <ul>
-      <li>Display Flex</li>
-      <li>Display Grid</li>
-      <li>Class Selector</li>
-      <li>Pseudo Selectors (hover effect)</li>
-    </ul>
-  </li>
+This project was developed using the following technologies:
 
-  <li>
-  JavaScript
-    <ul>
-      <li>Functions</li>
-      <li>Arrow Functions</li>
-      <li>Loops</li>
-      <li>Conditionals</li>
-      <li>Terciary Operatord</li>
-    </ul>
-  </li>
+- HTML e CSS
+- JavaScript
+- React
+- Git e Github
 
-  <li>
-  React
-    <ul>
-      <li>States</li>
-      <li>Props</li>
-      <li>Components</li>
-    </ul>
-  </li>
-</ol>
 
-<p align="center">
-  <img alt="Tic Tac Toe game initial state" src="./public/InitialState.png" width="300">
-  <img alt="Tic Tac Toe game" src="./public/Game.png" width="300" >
 
-</p>
-<p align="center">
-  <img alt="Tic Tac Toe game winner" src="./public/GameWinner.png" width="300">
-  <img alt="Tic Tac Toe game: list on descending order" src="./public/DescendingOrder.png" width="300">
-</p>
-<p align="center">
-  <img alt="Tic Tac Toe game draw" src="./public/Draw.png" width="300">
-</p>
+## 🔖 How to play
+
+- [Play online](https://tic-tac-toe-eosin-zeta.vercel.app)
+- Download the zip file and run <code>npm run dev</code> on the terminal and acess localhost on a browser.
